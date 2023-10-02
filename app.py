@@ -3,11 +3,8 @@ import spacy
 from spacy import displacy
 import json
 import subprocess
+subprocess.run(["python", "-m", "spacy", "download", "en_core_web_md"])
 
-try:
-    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_md"])
-except Exception as e:
-    print(f"An error occurred: {e}")
     
 # Initialize spaCy
 nlp = spacy.load("en_core_web_md")
